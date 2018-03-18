@@ -6,7 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-  @Input() name: string;
+    @Input () userName:string
+  // @Input() name: string;
 
   constructor() {
 
