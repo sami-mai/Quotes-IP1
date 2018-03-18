@@ -1,3 +1,6 @@
-<p>
-  user-details works!
-</p>
+<ul>
+  <li *ngFor="let userName of names">
+    {{userName}}
+    <!-- <app-user-details [name]="userName"></app-user-details> -->
+  </li>
+</ul>
