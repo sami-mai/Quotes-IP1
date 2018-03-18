@@ -1,4 +1,5 @@
 # Quotes
+An application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational. https://sami-mai.github.io/Quotes-IP1/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
