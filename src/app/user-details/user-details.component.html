@@ -1,6 +1,14 @@
+<div class="container">
+  <label>Username</label>
+  <input type="text" name="Username" value="Enter Username Here">
+  <label>Email</label>
+  <input type="text" name="Email" value="Enter Email Address Here">
+  <label>Age</label>
+  <input type="text" name="Age" value="Enter Age Here">
+</div>
 <ul>
   <li *ngFor="let userName of names">
-    {{userName}}
+    Hello {{userName}}
     <!-- <app-user-details [name]="userName"></app-user-details> -->
   </li>
 </ul>
