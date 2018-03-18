@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-    @Input () userName:string
+    @Input () userNames:string[]=[]
   // @Input() name: string;
 
   constructor() {
