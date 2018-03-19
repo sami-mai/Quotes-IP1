@@ -3,18 +3,20 @@
 <app-user-details></app-user-details>
 <form>
   <h5>Add a link to your quote</h5>
+  <form>
+    <div class="container">
+      <label for="title">Title</label>
+      <input name="title">
+    </div>
+    <div class="container">
+      <label for="link">Link</label>
+      <input name="link">
+    </div>
 
-  <div class="container">
-    <label for="title">Title</label>
-    <input name="title">
-  </div>
-  <div class="container">
-    <label for="link">Link</label>
-    <input name="link">
-  </div>
-
-  <button (click)="addQuote()" class="btn btn-primary">
+    <button (click)="addQuote()" class="btn btn-primary">
         Submit link
       </button>
+  </form>
+
 
 </form>
