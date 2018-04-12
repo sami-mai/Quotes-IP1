@@ -1,42 +1,54 @@
-<div class="row" style="text-align:center">
-  <div class="col-md-12">
-    <h3>Quote Rankings</h3>
-    <hr>
-  </div>
-</div>
-
 <div class="row">
-  <div class="col-md-12">
-    <div class="card">
+  <div class="col-md-4">
+    <h2>
+      Add a new Quote
+    </h2>
+    <hr>
+    <app-quote-form (addQuote)="addQuote($event)"></app-quote-form>
+  </div>
 
-      <div class="card-header">
-        <h3>Latest Quotes</h3>
+  <div class="col-md-8" id="qrank">
+    <div class="row" style="text-align:center">
+      <div class="col-md-12">
+        <h3>Quote Rankings</h3>
+        <hr>
       </div>
-
-      <div *ngFor='let quote of quotes;let i = index'>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-
-            <div class="card-body">
-              <div class="card-title">
-                <h5 id="{{i}}" appHighlight>"{{quote.quote}}"</h5>
-              </div>
-              <br>
-              <div class="card-text">
-
-                <app-quote-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event,i)'></app-quote-details>
-
-                <p>
-                  <a href="#" (click)='toogleDetails(i)'><small>See details here</small></a>
-                </p>
-              </div>
-            </div>
-            <hr>
-          </li>
-        </ul>
-      </div>
-
     </div>
 
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+
+          <div class="card-header">
+            <h3>Latest Quotes</h3>
+          </div>
+
+          <div *ngFor='let quote of quotes;let i = index'>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5 id="{{i}}" appHighlight>"{{quote.quote}}"</h5>
+                  </div>
+                  <br>
+                  <div class="card-text">
+
+                    <app-quote-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event,i)'></app-quote-details>
+
+                    <p>
+                      <a href="#" (click)='toogleDetails(i)'><small>See details here</small></a>
+                    </p>
+                  </div>
+                </div>
+                <hr>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>
