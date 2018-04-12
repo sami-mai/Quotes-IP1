@@ -1,13 +1,32 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center"> -->
-<header>
-  <h1>
-      Sami-Mai Quotes!
-      <hr>
-  </h1>
-</header>
-<main>
-  <p>
-    <app-quotes></app-quotes>
-  </p>
-</main>
+<body>
+  <div class="container-fluid" style="text-align:center">
+    <h1 id="qtitle">
+       {{ title }}
+    </h1>
+  </div>
+
+  <div class="container jumbotron">
+    <div class="row">
+
+      <div class="col-md-4">
+        <h2>
+            Add a new Quote
+          </h2>
+        <hr>
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      </div>
+
+      <div class="col-md-8" id="qrank">
+        <app-quote></app-quote>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="container-fluid">
+      <p>&copy; Mai-Quotes 2018</p>
+    </div>
+  </footer>
+
+</body>
