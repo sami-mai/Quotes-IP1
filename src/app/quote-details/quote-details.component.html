@@ -1,3 +1,44 @@
-<p>
-  quote-details works!
-</p>
+<br>
+<div class="row">
+  <div class="col-md-6">
+    <p>Author: {{quote.author}}</p>
+
+  </div>
+  <div class="col-md-6">
+    <p>Posted by: {{quote.postedBy}}</p>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+    <button type="Submit" class="btn btn-primary btn-sm" (click)='voteUp()'>Up Vote</button>
+  </div>
+
+  <div class="col-md-3">
+    <button type="Submit" class="btn btn-success btn-sm" (click)='voteDown()'>Down Vote</button>
+  </div>
+
+  <div class="col-md-3"></div>
+
+  <div class="col-md-3 bottom">
+    <button type="Submit" class="btn btn-danger btn-sm" (click)='quoteDelete(true)'>Delete</button>
+  </div>
+
+</div>
+
+<div class="card-footer text-muted">
+  <div class="row">
+    <div class="col-md-3">
+      <strong><em>{{votes}} likes</em></strong>
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+      <p>
+        <small><em> {{quote.datePublished|dateCount}} days ago</em></small>
+      </p>
+    </div>
+  </div>
+</div>
+<br>
