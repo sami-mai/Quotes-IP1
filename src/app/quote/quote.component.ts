@@ -15,7 +15,14 @@ export class QuoteComponent implements OnInit {
   new Quote(4,'Be the change that you wish to see in the world.','Mahatma Gandhi','Sami-Mai',new Date(2007,7,14)),
   new Quote(3,'My body knows its limits, my mind refuses to accept them.','Unknown','Sami-Mai',new Date(2018,4,10)),
   ]
-  
+
+  addQuote(quote){
+        let quoteLength = this.quotes.length;
+        quote.id=quoteLength+1;
+         quote.datePublished = new Date()
+        this.quotes.push(quote)
+
+    }
   constructor() { }
 
   ngOnInit() {
